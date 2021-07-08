@@ -1,6 +1,6 @@
 *** Settings ***
 Documentation    arquivo responsavel pelos testes do mobile testing App: YouTube
-Resource         ./resource_mobile.robot
+Resource         resource_mobile.robot
 Suite Setup      Abrir o aplicativo no celular
 
 *** Test Cases ***

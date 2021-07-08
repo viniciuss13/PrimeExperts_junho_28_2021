@@ -1,6 +1,6 @@
 *** Settings ***
 Documentation    teste case web
-Resource         resource_web.robot
+Resource          resource_web.robot
 Suite Setup       Abrir o navegador
 # Suite Teardown    Fechar o navegador
 
