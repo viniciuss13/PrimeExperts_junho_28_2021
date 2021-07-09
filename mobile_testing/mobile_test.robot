@@ -1,9 +1,11 @@
 *** Settings ***
+
 Documentation    arquivo responsavel pelos testes do mobile testing App: YouTube
 Resource         resource_mobile.robot
 Suite Setup      Abrir o aplicativo no celular
 
 *** Test Cases ***
+
 Pesquisar canal “Adrenaline”
     Buscar o canal “Adrenaline"
     Selecionar o canal na lista de busca

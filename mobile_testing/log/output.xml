@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.0.3 (Python 3.9.6 on win32)" generated="20210708 13:03:28.243" rpa="false" schemaversion="2">
+<suite id="s1" name="Mobile Test" source="c:\Users\Vinicius\Documents\projetos\PrimeExperts_junho_28_2021\mobile_testing\mobile_test.robot">
+<kw name="Abrir o aplicativo no celular" library="resource_mobile" type="SETUP">
+<kw name="Open Application" library="AppiumLibrary">
+<arg>${REMOTE_URL}</arg>
+<arg>platformName=${PLATFORM_NAME}</arg>
+<arg>platformVersion=${PLATFORM_VERSION}</arg>
+<arg>deviceName=${DEVICE_NAME}</arg>
+<arg>appPackage=${APP_PACKAGE}</arg>
+<arg>appActivity=${APP_ACTIVITY}</arg>
+<arg>automationName=${AUTOMATION_NAME}</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<status status="PASS" starttime="20210708 13:03:28.563" endtime="20210708 13:03:53.934"/>
+</kw>
+<status status="PASS" starttime="20210708 13:03:28.562" endtime="20210708 13:03:53.935"/>
+</kw>
+<test id="s1-t1" name="Pesquisar canal “Adrenaline”">
+<kw name="Buscar o canal “Adrenaline&quot;" library="resource_mobile" sourcename="Buscar o canal “${nome_do_canal}&quot;">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${BTN_SEARCH}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20210708 13:03:53.938" endtime="20210708 13:03:57.838"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${BTN_SEARCH}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20210708 13:03:57.843" level="INFO">Clicking element 'accessibility_id=Search'.</msg>
+<status status="PASS" starttime="20210708 13:03:57.838" endtime="20210708 13:03:58.271"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${INPUT_SEARCH}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20210708 13:03:58.271" endtime="20210708 13:03:59.860"/>
+</kw>
+<kw name="Input Text" library="AppiumLibrary">
+<arg>${INPUT_SEARCH}</arg>
+<arg>${nome_do_canal}</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<msg timestamp="20210708 13:03:59.865" level="INFO">Typing text 'Adrenaline' into text field 'search_edit_text'</msg>
+<status status="PASS" starttime="20210708 13:03:59.860" endtime="20210708 13:04:00.674"/>
+</kw>
+<kw name="Press Keycode" library="AppiumLibrary">
+<arg>66</arg>
+<doc>Sends a press of keycode to the device.</doc>
+<status status="PASS" starttime="20210708 13:04:00.674" endtime="20210708 13:04:00.988"/>
+</kw>
+<status status="PASS" starttime="20210708 13:03:53.937" endtime="20210708 13:04:00.988"/>
+</kw>
+<kw name="Selecionar o canal na lista de busca" library="resource_mobile">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${CHANNEL_NAME}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20210708 13:04:00.990" endtime="20210708 13:04:07.159"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${CHANNEL_NAME}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20210708 13:04:07.164" level="INFO">Clicking element 'channel_name'.</msg>
+<status status="PASS" starttime="20210708 13:04:07.159" endtime="20210708 13:04:07.290"/>
+</kw>
+<status status="PASS" starttime="20210708 13:04:00.990" endtime="20210708 13:04:07.290"/>
+</kw>
+<kw name="Navegar pelo menu Playlist" library="resource_mobile">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${PLAYLISTS}</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20210708 13:04:07.293" endtime="20210708 13:04:10.545"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${PLAYLISTS}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20210708 13:04:10.553" level="INFO">Clicking element 'accessibility_id=Playlists'.</msg>
+<status status="PASS" starttime="20210708 13:04:10.545" endtime="20210708 13:04:10.715"/>
+</kw>
+<status status="PASS" starttime="20210708 13:04:07.292" endtime="20210708 13:04:10.716"/>
+</kw>
+<kw name="Selecionar a playlist da E3 do canal" library="resource_mobile">
+<kw name="Wait Until Element Is Visible" library="AppiumLibrary">
+<arg>${CHOOSE_E3}</arg>
+<arg>10</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" starttime="20210708 13:04:10.720" endtime="20210708 13:04:12.577"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${CHOOSE_E3}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20210708 13:04:12.581" level="INFO">Clicking element 'xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup/android.widget.FrameLayout[2]/android.widget.FrameLayout/android.support.v4.view.ViewPager/android.view.ViewGroup/android.support.v7.widget.RecyclerView/android.widget.RelativeLayout[2]/android.widget.TextView[1]'.</msg>
+<status status="PASS" starttime="20210708 13:04:12.578" endtime="20210708 13:04:12.868"/>
+</kw>
+<status status="PASS" starttime="20210708 13:04:10.719" endtime="20210708 13:04:12.868"/>
+</kw>
+<kw name="Navegar por todos os botões da barra de Menus(Home, Explorar...) do YouTube" library="resource_mobile">
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${HOME_BTN}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20210708 13:04:12.873" level="INFO">Clicking element 'accessibility_id=Home'.</msg>
+<status status="PASS" starttime="20210708 13:04:12.870" endtime="20210708 13:04:14.455"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${TRENDING_BTN}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20210708 13:04:14.460" level="INFO">Clicking element 'accessibility_id=Trending'.</msg>
+<status status="PASS" starttime="20210708 13:04:14.455" endtime="20210708 13:04:15.252"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${SUBSCRIPTIONS_BTN}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20210708 13:04:15.257" level="INFO">Clicking element 'accessibility_id=Subscriptions'.</msg>
+<status status="PASS" starttime="20210708 13:04:15.252" endtime="20210708 13:04:16.181"/>
+</kw>
+<kw name="Click Element" library="AppiumLibrary">
+<arg>${NOTIFICATION_BTN}</arg>
+<doc>Click element identified by `locator`.</doc>
+<msg timestamp="20210708 13:04:16.186" level="INFO">Clicking element 'accessibility_id=Notifications'.</msg>
+<status status="PASS" starttime="20210708 13:04:16.181" endtime="20210708 13:04:17.534"/>
+</kw>
+<status status="PASS" starttime="20210708 13:04:12.869" endtime="20210708 13:04:17.535"/>
+</kw>
+<status status="PASS" starttime="20210708 13:03:53.935" endtime="20210708 13:04:17.536"/>
+</test>
+<doc>arquivo responsavel pelos testes do mobile testing App: YouTube</doc>
+<status status="PASS" starttime="20210708 13:03:28.246" endtime="20210708 13:04:17.540"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Mobile Test">Mobile Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
