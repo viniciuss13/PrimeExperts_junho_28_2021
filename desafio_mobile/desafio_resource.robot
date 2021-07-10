@@ -20,9 +20,9 @@ ${BTN_LOGIN}             accessibility_id=Account
 ${BTN_SINGIN}            button 
 ${BTN_ADD}               name
 ${INSERT_EMAIL}          xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View[1]/android.view.View[3]/android.view.View/android.view.View[1]/android.view.View[1]/android.widget.EditText
-# ${BTN_NEXT}              android.widget.Button
-# ${INSERT_PSW}            android.widget.EditText
-          
+${BTN_NEXT}              xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View[1]/android.view.View[4]/android.view.View/android.widget.Button
+${INSERT_PSW}            xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View[1]/android.view.View[3]/android.view.View/android.view.View[1]/android.view.View/android.view.View/android.view.View[1]/android.widget.EditText
+${password}              vinicius13             
 
 
 
@@ -46,12 +46,12 @@ Logar no aplicativo com a conta "${email}"
     Wait Until Element Is Visible       ${INSERT_EMAIL}       30
     Input Text                          ${INSERT_EMAIL}       ${email}       
 
-    # Wait Until Element Is Visible       ${BTN_NEXT}      30
-    # Input Text                          ${BTN_NEXT}      
+    Wait Until Element Is Visible       ${BTN_NEXT}      30
+    Click Element                       ${BTN_NEXT}      
 
-    # Wait Until Element Is Visible       ${INSERT_PSW}      30
-    # Input Text                          ${INSERT_PSW}    
-    # Press Keycode                       66
+    Wait Until Element Is Visible       ${INSERT_PSW}      30
+    Input Text                          ${INSERT_PSW}      ${password}
+    Press Keycode                       66
     
 
 
