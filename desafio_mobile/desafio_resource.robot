@@ -19,10 +19,10 @@ ${AUTOMATION_NAME}         UiAutomator2
 ${BTN_LOGIN}             accessibility_id=Account
 ${BTN_SINGIN}            button 
 ${BTN_ADD}               name
-${INSERT_EMAIL}          android.widget.EditText
-${BTN_NEXT}              android.widget.Button
-${INSERT_PSW}            android.widget.EditText
-${}          
+${INSERT_EMAIL}          xpath=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.webkit.WebView/android.webkit.WebView/android.view.View[1]/android.view.View[3]/android.view.View/android.view.View[1]/android.view.View[1]/android.widget.EditText
+# ${BTN_NEXT}              android.widget.Button
+# ${INSERT_PSW}            android.widget.EditText
+          
 
 
 
@@ -44,11 +44,15 @@ Logar no aplicativo com a conta "${email}"
     Click Element                       ${BTN_ADD}  
 
     Wait Until Element Is Visible       ${INSERT_EMAIL}       30
-    Input Text                          ${INSERT_EMAIL}       ${email}
+    Input Text                          ${INSERT_EMAIL}       ${email}       
 
+    # Wait Until Element Is Visible       ${BTN_NEXT}      30
+    # Input Text                          ${BTN_NEXT}      
 
-
-
+    # Wait Until Element Is Visible       ${INSERT_PSW}      30
+    # Input Text                          ${INSERT_PSW}    
+    # Press Keycode                       66
+    
 
 
 Entrar no menu “${nome_do_menu}”
