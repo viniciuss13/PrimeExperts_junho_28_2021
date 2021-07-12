@@ -1,361 +1,178 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.0.3 (Python 3.9.6 on win32)" generated="20210708 15:06:44.033" rpa="false" schemaversion="2">
+<robot generator="Robot 4.0.3 (Python 3.9.6 on win32)" generated="20210712 13:04:41.582" rpa="false" schemaversion="2">
 <suite id="s1" name="Web Test" source="C:\Users\Vinicius\Documents\projetos\PrimeExperts_junho_28_2021\desafio_web\web_test.robot">
 <kw name="Abrir o navegador" library="resource_web" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>browser=chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20210708 15:06:44.401" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
-<status status="PASS" starttime="20210708 15:06:44.401" endtime="20210708 15:06:46.337"/>
+<msg timestamp="20210712 13:04:41.886" level="INFO">Opening browser 'chrome' to base url 'None'.</msg>
+<status status="PASS" starttime="20210712 13:04:41.885" endtime="20210712 13:04:43.314"/>
 </kw>
-<status status="PASS" starttime="20210708 15:06:44.401" endtime="20210708 15:06:46.337"/>
+<status status="PASS" starttime="20210712 13:04:41.885" endtime="20210712 13:04:43.314"/>
 </kw>
 <test id="s1-t1" name="Caso de Teste 01: Pesquisar produto existente">
 <kw name="Acessar a página home do site Automation Practice" library="resource_web">
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20210708 15:06:46.345" level="INFO">Opening url 'http://automationpractice.com'</msg>
-<status status="PASS" starttime="20210708 15:06:46.344" endtime="20210708 15:06:56.764"/>
+<msg timestamp="20210712 13:04:43.318" level="INFO">Opening url 'http://automationpractice.com'</msg>
+<status status="PASS" starttime="20210712 13:04:43.318" endtime="20210712 13:04:44.563"/>
 </kw>
-<status status="PASS" starttime="20210708 15:06:46.343" endtime="20210708 15:06:56.765"/>
+<status status="PASS" starttime="20210712 13:04:43.317" endtime="20210712 13:04:44.564"/>
 </kw>
 <kw name="Digitar o nome do produto &quot;Blouse&quot; no campo de pesquisa" library="resource_web" sourcename="Digitar o nome do produto &quot;${produto}&quot; no campo de pesquisa">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>id:search_query_top</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20210708 15:06:56.771" endtime="20210708 15:06:56.836"/>
+<msg timestamp="20210712 13:04:50.028" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-29.png"&gt;&lt;img src="selenium-screenshot-29.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20210712 13:04:50.031" level="FAIL">Element 'id:search_query_top' not visible after 5 seconds.</msg>
+<status status="FAIL" starttime="20210712 13:04:44.566" endtime="20210712 13:04:50.032"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>id:search_query_top</arg>
 <arg>${produto}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20210708 15:06:56.838" level="INFO">Typing text 'Blouse' into text field 'id:search_query_top'.</msg>
-<status status="PASS" starttime="20210708 15:06:56.837" endtime="20210708 15:06:57.012"/>
+<status status="NOT RUN" starttime="20210712 13:04:50.032" endtime="20210712 13:04:50.032"/>
 </kw>
-<status status="PASS" starttime="20210708 15:06:56.770" endtime="20210708 15:06:57.013"/>
+<status status="FAIL" starttime="20210712 13:04:44.565" endtime="20210712 13:04:50.033"/>
 </kw>
 <kw name="Clicar no botão pesquisar" library="resource_web">
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>name:submit_search</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20210708 15:06:57.018" level="INFO">Clicking button 'name:submit_search'.</msg>
-<status status="PASS" starttime="20210708 15:06:57.017" endtime="20210708 15:06:57.122"/>
-</kw>
-<status status="PASS" starttime="20210708 15:06:57.016" endtime="20210708 15:06:57.122"/>
+<status status="NOT RUN" starttime="20210712 13:04:50.035" endtime="20210712 13:04:50.035"/>
 </kw>
 <kw name="Conferir se o produto &quot;Blouse&quot; foi listado no site" library="resource_web" sourcename="Conferir se o produto &quot;${produto}&quot; foi listado no site">
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>//h5[@itemprop='name'][contains(.,'Blouse')]</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20210708 15:06:57.123" endtime="20210708 15:06:59.562"/>
+<status status="NOT RUN" starttime="20210712 13:04:50.036" endtime="20210712 13:04:50.036"/>
 </kw>
-<kw name="Element Text Should Be" library="SeleniumLibrary">
-<arg>//h5[@itemprop='name'][contains(.,'Blouse')]</arg>
-<arg>${produto}</arg>
-<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<msg timestamp="20210708 15:06:59.564" level="INFO">Verifying element '//h5[@itemprop='name'][contains(.,'Blouse')]' contains exact text 'Blouse'.</msg>
-<status status="PASS" starttime="20210708 15:06:59.563" endtime="20210708 15:06:59.646"/>
-</kw>
-<status status="PASS" starttime="20210708 15:06:57.123" endtime="20210708 15:06:59.646"/>
-</kw>
-<status status="PASS" starttime="20210708 15:06:46.338" endtime="20210708 15:06:59.654"/>
+<status status="FAIL" starttime="20210712 13:04:43.315" endtime="20210712 13:04:50.037">Element 'id:search_query_top' not visible after 5 seconds.</status>
 </test>
 <test id="s1-t2" name="Caso de Teste 02: Pesquisar produto inexistente">
 <kw name="Acessar a página home do site Automation Practice" library="resource_web">
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20210708 15:06:59.663" level="INFO">Opening url 'http://automationpractice.com'</msg>
-<status status="PASS" starttime="20210708 15:06:59.662" endtime="20210708 15:07:03.124"/>
+<msg timestamp="20210712 13:04:50.051" level="INFO">Opening url 'http://automationpractice.com'</msg>
+<msg timestamp="20210712 13:05:01.068" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: chrome not reachable
+  (Session info: chrome=91.0.4472.124)
+</msg>
+<msg timestamp="20210712 13:05:01.077" level="FAIL">WebDriverException: Message: unknown error: cannot determine loading status
+from unknown error: cannot determine loading status
+from disconnected: unable to send message to renderer
+  (Session info: chrome=91.0.4472.124)
+</msg>
+<status status="FAIL" starttime="20210712 13:04:50.051" endtime="20210712 13:05:01.078"/>
 </kw>
-<status status="PASS" starttime="20210708 15:06:59.661" endtime="20210708 15:07:03.125"/>
+<status status="FAIL" starttime="20210712 13:04:50.050" endtime="20210712 13:05:01.078"/>
 </kw>
 <kw name="Digitar o nome do produto &quot;itemNãoExistente&quot; no campo de pesquisa" library="resource_web" sourcename="Digitar o nome do produto &quot;${produto}&quot; no campo de pesquisa">
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>id:search_query_top</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20210708 15:07:03.132" endtime="20210708 15:07:03.160"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id:search_query_top</arg>
-<arg>${produto}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20210708 15:07:03.161" level="INFO">Typing text 'itemNãoExistente' into text field 'id:search_query_top'.</msg>
-<status status="PASS" starttime="20210708 15:07:03.161" endtime="20210708 15:07:03.361"/>
-</kw>
-<status status="PASS" starttime="20210708 15:07:03.131" endtime="20210708 15:07:03.361"/>
+<status status="NOT RUN" starttime="20210712 13:05:01.079" endtime="20210712 13:05:01.079"/>
 </kw>
 <kw name="Clicar no botão pesquisar" library="resource_web">
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>name:submit_search</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20210708 15:07:03.363" level="INFO">Clicking button 'name:submit_search'.</msg>
-<status status="PASS" starttime="20210708 15:07:03.363" endtime="20210708 15:07:05.238"/>
-</kw>
-<status status="PASS" starttime="20210708 15:07:03.362" endtime="20210708 15:07:05.239"/>
+<status status="NOT RUN" starttime="20210712 13:05:01.079" endtime="20210712 13:05:01.080"/>
 </kw>
 <kw name="Conferir mensagem de erro &quot;${MENSAGEM_ALERTA}&quot;" library="resource_web" sourcename="Conferir Mensagem De Erro &quot;${MENSAGEM_ALERTA}&quot;">
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>//*[@id="center_column"]/p[@class='alert alert-warning']</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20210708 15:07:05.241" endtime="20210708 15:07:05.271"/>
+<status status="NOT RUN" starttime="20210712 13:05:01.080" endtime="20210712 13:05:01.080"/>
 </kw>
-<kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>//*[@id="center_column"]/p[@class='alert alert-warning']</arg>
-<arg>${MENSAGEM_ALERTA}</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20210708 15:07:05.289" level="INFO">Element '//*[@id="center_column"]/p[@class='alert alert-warning']' is displayed.</msg>
-<status status="PASS" starttime="20210708 15:07:05.271" endtime="20210708 15:07:05.289"/>
-</kw>
-<status status="PASS" starttime="20210708 15:07:05.240" endtime="20210708 15:07:05.290"/>
-</kw>
-<status status="PASS" starttime="20210708 15:06:59.660" endtime="20210708 15:07:05.290"/>
+<status status="FAIL" starttime="20210712 13:04:50.048" endtime="20210712 13:05:01.081">WebDriverException: Message: unknown error: cannot determine loading status
+from unknown error: cannot determine loading status
+from disconnected: unable to send message to renderer
+  (Session info: chrome=91.0.4472.124)
+</status>
 </test>
 <test id="s1-t3" name="Caso de Teste 03: Listar Produtos">
 <kw name="Acessar a página home do site Automation Practice" library="resource_web">
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20210708 15:07:05.293" level="INFO">Opening url 'http://automationpractice.com'</msg>
-<status status="PASS" starttime="20210708 15:07:05.293" endtime="20210708 15:07:07.435"/>
+<msg timestamp="20210712 13:05:01.090" level="INFO">Opening url 'http://automationpractice.com'</msg>
+<msg timestamp="20210712 13:05:25.373" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: chrome not reachable
+  (Session info: chrome=91.0.4472.124)
+</msg>
+<msg timestamp="20210712 13:05:25.378" level="FAIL">WebDriverException: Message: chrome not reachable
+  (Session info: chrome=91.0.4472.124)
+</msg>
+<status status="FAIL" starttime="20210712 13:05:01.089" endtime="20210712 13:05:25.378"/>
 </kw>
-<status status="PASS" starttime="20210708 15:07:05.292" endtime="20210708 15:07:07.436"/>
+<status status="FAIL" starttime="20210712 13:05:01.088" endtime="20210712 13:05:25.378"/>
 </kw>
 <kw name="Passar o mouse por cima da categoria &quot;Women&quot; no menu principal superior de categorias" library="resource_web" sourcename="Passar o mouse por cima da categoria &quot;${WOMEN}&quot; no menu principal superior de categorias">
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>xpath=//*[@id="block_top_menu"]//a[@title="${WOMEN}"]</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20210708 15:07:07.437" endtime="20210708 15:07:07.489"/>
-</kw>
-<kw name="Mouse Over" library="SeleniumLibrary">
-<arg>xpath=//*[@id="block_top_menu"]//a[@title="${WOMEN}"]</arg>
-<doc>Simulates hovering the mouse over the element ``locator``.</doc>
-<msg timestamp="20210708 15:07:07.490" level="INFO">Simulating Mouse Over on element 'xpath=//*[@id="block_top_menu"]//a[@title="Women"]'.</msg>
-<status status="PASS" starttime="20210708 15:07:07.490" endtime="20210708 15:07:07.824"/>
-</kw>
-<status status="PASS" starttime="20210708 15:07:07.437" endtime="20210708 15:07:07.824"/>
+<status status="NOT RUN" starttime="20210712 13:05:25.380" endtime="20210712 13:05:25.380"/>
 </kw>
 <kw name="Clicar na sub categoria &quot;Summer Dresses&quot;" library="resource_web" sourcename="Clicar na sub categoria &quot;${SUMMER}&quot;">
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>xpath=//*[@id="block_top_menu"]//a[@title="${SUMMER}"]</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20210708 15:07:07.825" endtime="20210708 15:07:07.868"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath=//*[@id="block_top_menu"]//a[@title="${SUMMER}"]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20210708 15:07:07.870" level="INFO">Clicking element 'xpath=//*[@id="block_top_menu"]//a[@title="Summer Dresses"]'.</msg>
-<status status="PASS" starttime="20210708 15:07:07.869" endtime="20210708 15:07:10.062"/>
-</kw>
-<status status="PASS" starttime="20210708 15:07:07.825" endtime="20210708 15:07:10.062"/>
+<status status="NOT RUN" starttime="20210712 13:05:25.381" endtime="20210712 13:05:25.381"/>
 </kw>
 <kw name="Conferir se os produtos da sub-categoria &quot;Summer Dresses&quot; foram mostrados na página" library="resource_web" sourcename="Conferir se os produtos da sub-categoria &quot;${SUMMER}&quot; foram mostrados na página">
-<kw name="Page Should Contain Element" library="SeleniumLibrary">
-<arg>xpath=//*[@id="center_column"]/h1/span[contains(text(),"${SUMMER}")]</arg>
-<doc>Verifies that element ``locator`` is found on the current page.</doc>
-<msg timestamp="20210708 15:07:10.088" level="INFO">Current page contains element 'xpath=//*[@id="center_column"]/h1/span[contains(text(),"Summer Dresses")]'.</msg>
-<status status="PASS" starttime="20210708 15:07:10.064" endtime="20210708 15:07:10.088"/>
+<status status="NOT RUN" starttime="20210712 13:05:25.382" endtime="20210712 13:05:25.382"/>
 </kw>
-<kw name="Page Should Contain Element" library="SeleniumLibrary">
-<arg>xpath=//*[@id="center_column"]/ul/li[1]/div/div[2]/h5/a[@title="${PRODUTOS_SUB_SUMMER[0]}"]</arg>
-<doc>Verifies that element ``locator`` is found on the current page.</doc>
-<msg timestamp="20210708 15:07:10.105" level="INFO">Current page contains element 'xpath=//*[@id="center_column"]/ul/li[1]/div/div[2]/h5/a[@title="Printed Summer Dress"]'.</msg>
-<status status="PASS" starttime="20210708 15:07:10.089" endtime="20210708 15:07:10.105"/>
-</kw>
-<kw name="Page Should Contain Element" library="SeleniumLibrary">
-<arg>xpath=//*[@id="center_column"]/ul/li[2]/div/div[2]/h5/a[@title="${PRODUTOS_SUB_SUMMER[1]}"]</arg>
-<doc>Verifies that element ``locator`` is found on the current page.</doc>
-<msg timestamp="20210708 15:07:10.119" level="INFO">Current page contains element 'xpath=//*[@id="center_column"]/ul/li[2]/div/div[2]/h5/a[@title="Printed Summer Dress"]'.</msg>
-<status status="PASS" starttime="20210708 15:07:10.105" endtime="20210708 15:07:10.119"/>
-</kw>
-<kw name="Page Should Contain Element" library="SeleniumLibrary">
-<arg>xpath=//*[@id="center_column"]/ul/li[3]/div/div[2]/h5/a[@title="${PRODUTOS_SUB_SUMMER[2]}"]</arg>
-<doc>Verifies that element ``locator`` is found on the current page.</doc>
-<msg timestamp="20210708 15:07:10.132" level="INFO">Current page contains element 'xpath=//*[@id="center_column"]/ul/li[3]/div/div[2]/h5/a[@title="Printed Chiffon Dress"]'.</msg>
-<status status="PASS" starttime="20210708 15:07:10.119" endtime="20210708 15:07:10.132"/>
-</kw>
-<status status="PASS" starttime="20210708 15:07:10.063" endtime="20210708 15:07:10.132"/>
-</kw>
-<status status="PASS" starttime="20210708 15:07:05.291" endtime="20210708 15:07:10.132"/>
+<status status="FAIL" starttime="20210712 13:05:01.086" endtime="20210712 13:05:25.383">WebDriverException: Message: chrome not reachable
+  (Session info: chrome=91.0.4472.124)
+</status>
 </test>
 <test id="s1-t4" name="Caso de Teste 04: Adicionar Cliente">
 <kw name="Acessar a página home do site Automation Practice" library="resource_web">
 <kw name="Go To" library="SeleniumLibrary">
 <arg>${URL}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20210708 15:07:10.135" level="INFO">Opening url 'http://automationpractice.com'</msg>
-<status status="PASS" starttime="20210708 15:07:10.135" endtime="20210708 15:07:13.191"/>
+<msg timestamp="20210712 13:05:25.391" level="INFO">Opening url 'http://automationpractice.com'</msg>
+<msg timestamp="20210712 13:05:49.648" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: chrome not reachable
+  (Session info: chrome=91.0.4472.124)
+</msg>
+<msg timestamp="20210712 13:05:49.652" level="FAIL">WebDriverException: Message: chrome not reachable
+  (Session info: chrome=91.0.4472.124)
+</msg>
+<status status="FAIL" starttime="20210712 13:05:25.390" endtime="20210712 13:05:49.653"/>
 </kw>
-<status status="PASS" starttime="20210708 15:07:10.134" endtime="20210708 15:07:13.191"/>
+<status status="FAIL" starttime="20210712 13:05:25.389" endtime="20210712 13:05:49.653"/>
 </kw>
 <kw name="Clicar em &quot;Sign in&quot;" library="resource_web">
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>xpath=//*[@id="header"]/div[2]/div/div/nav/div[1]/a</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20210708 15:07:13.194" level="INFO">Clicking element 'xpath=//*[@id="header"]/div[2]/div/div/nav/div[1]/a'.</msg>
-<status status="PASS" starttime="20210708 15:07:13.194" endtime="20210708 15:07:16.184"/>
-</kw>
-<status status="PASS" starttime="20210708 15:07:13.192" endtime="20210708 15:07:16.185"/>
+<status status="NOT RUN" starttime="20210712 13:05:49.654" endtime="20210712 13:05:49.654"/>
 </kw>
 <kw name="Informar um e-mail válido" library="resource_web">
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>id=email_create</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20210708 15:07:16.188" endtime="20210708 15:07:16.225"/>
-</kw>
-<kw name="Generate Random String" library="String">
-<var>${EMAIL}</var>
-<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
-<msg timestamp="20210708 15:07:16.226" level="INFO">${EMAIL} = 79w3HuP6</msg>
-<status status="PASS" starttime="20210708 15:07:16.226" endtime="20210708 15:07:16.226"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id=email_create</arg>
-<arg>${EMAIL}@robotframework.com</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20210708 15:07:16.227" level="INFO">Typing text '79w3HuP6@robotframework.com' into text field 'id=email_create'.</msg>
-<status status="PASS" starttime="20210708 15:07:16.226" endtime="20210708 15:07:16.370"/>
-</kw>
-<status status="PASS" starttime="20210708 15:07:16.187" endtime="20210708 15:07:16.370"/>
+<status status="NOT RUN" starttime="20210712 13:05:49.655" endtime="20210712 13:05:49.655"/>
 </kw>
 <kw name="Clicar em &quot;Create an account&quot;" library="resource_web">
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>id=SubmitCreate</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20210708 15:07:16.372" level="INFO">Clicking button 'id=SubmitCreate'.</msg>
-<status status="PASS" starttime="20210708 15:07:16.371" endtime="20210708 15:07:16.465"/>
-</kw>
-<status status="PASS" starttime="20210708 15:07:16.370" endtime="20210708 15:07:16.466"/>
+<status status="NOT RUN" starttime="20210712 13:05:49.656" endtime="20210712 13:05:49.656"/>
 </kw>
 <kw name="Preencher os dados obrigatórios" library="resource_web">
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>xpath=//*[@id="account-creation_form"]//h3[contains(text(),"Your personal information")]</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20210708 15:07:16.467" endtime="20210708 15:07:18.261"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>id=id_gender2</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20210708 15:07:18.261" level="INFO">Clicking element 'id=id_gender2'.</msg>
-<status status="PASS" starttime="20210708 15:07:18.261" endtime="20210708 15:07:18.350"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id=customer_firstname</arg>
-<arg>${PESSOA.nome}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20210708 15:07:18.351" level="INFO">Typing text 'Carla' into text field 'id=customer_firstname'.</msg>
-<status status="PASS" starttime="20210708 15:07:18.350" endtime="20210708 15:07:18.532"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id=customer_lastname</arg>
-<arg>${PESSOA.sobrenome}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20210708 15:07:18.535" level="INFO">Typing text 'Soares' into text field 'id=customer_lastname'.</msg>
-<status status="PASS" starttime="20210708 15:07:18.532" endtime="20210708 15:07:18.704"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id=passwd</arg>
-<arg>${PESSOA.pwd}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20210708 15:07:18.706" level="INFO">Typing text '172839' into text field 'id=passwd'.</msg>
-<status status="PASS" starttime="20210708 15:07:18.704" endtime="20210708 15:07:18.945"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id=address1</arg>
-<arg>${PESSOA.endereco}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20210708 15:07:18.947" level="INFO">Typing text 'Rua Maranhão, Bairro Pituba' into text field 'id=address1'.</msg>
-<status status="PASS" starttime="20210708 15:07:18.945" endtime="20210708 15:07:19.132"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id=city</arg>
-<arg>${PESSOA.cidade}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20210708 15:07:19.134" level="INFO">Typing text 'Salvador' into text field 'id=city'.</msg>
-<status status="PASS" starttime="20210708 15:07:19.133" endtime="20210708 15:07:19.293"/>
-</kw>
-<kw name="Set Focus To Element" library="SeleniumLibrary">
-<arg>id=id_state</arg>
-<doc>Sets the focus to the element identified by ``locator``.</doc>
-<status status="PASS" starttime="20210708 15:07:19.294" endtime="20210708 15:07:19.320"/>
-</kw>
-<kw name="Select From List By Index" library="SeleniumLibrary">
-<arg>id=id_state</arg>
-<arg>${PESSOA.id_estado}</arg>
-<doc>Selects options from selection list ``locator`` by ``indexes``.</doc>
-<msg timestamp="20210708 15:07:19.322" level="INFO">Selecting options from selection list 'id=id_state' by index 8.</msg>
-<status status="PASS" starttime="20210708 15:07:19.320" endtime="20210708 15:07:19.504"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id=postcode</arg>
-<arg>${PESSOA.cep}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20210708 15:07:19.505" level="INFO">Typing text '17283' into text field 'id=postcode'.</msg>
-<status status="PASS" starttime="20210708 15:07:19.504" endtime="20210708 15:07:19.619"/>
-</kw>
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>id=phone_mobile</arg>
-<arg>${PESSOA.telefone}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20210708 15:07:19.620" level="INFO">Typing text '994063651' into text field 'id=phone_mobile'.</msg>
-<status status="PASS" starttime="20210708 15:07:19.619" endtime="20210708 15:07:19.758"/>
-</kw>
-<status status="PASS" starttime="20210708 15:07:16.466" endtime="20210708 15:07:19.758"/>
+<status status="NOT RUN" starttime="20210712 13:05:49.657" endtime="20210712 13:05:49.657"/>
 </kw>
 <kw name="Submeter cadastro" library="resource_web">
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>submitAccount</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20210708 15:07:19.759" level="INFO">Clicking button 'submitAccount'.</msg>
-<status status="PASS" starttime="20210708 15:07:19.759" endtime="20210708 15:07:21.982"/>
-</kw>
-<status status="PASS" starttime="20210708 15:07:19.759" endtime="20210708 15:07:21.983"/>
+<status status="NOT RUN" starttime="20210712 13:05:49.658" endtime="20210712 13:05:49.658"/>
 </kw>
 <kw name="Conferir se o cadastro foi efetuado com sucesso" library="resource_web">
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>xpath=//*[@id="center_column"]/p</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20210708 15:07:21.984" endtime="20210708 15:07:22.018"/>
+<status status="NOT RUN" starttime="20210712 13:05:49.659" endtime="20210712 13:05:49.659"/>
 </kw>
-<kw name="Element Text Should Be" library="SeleniumLibrary">
-<arg>xpath=//*[@id="center_column"]/p</arg>
-<arg>Welcome to your account. Here you can manage all of your personal information and orders.</arg>
-<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<msg timestamp="20210708 15:07:22.018" level="INFO">Verifying element 'xpath=//*[@id="center_column"]/p' contains exact text 'Welcome to your account. Here you can manage all of your personal information and orders.'.</msg>
-<status status="PASS" starttime="20210708 15:07:22.018" endtime="20210708 15:07:22.039"/>
-</kw>
-<kw name="Element Text Should Be" library="SeleniumLibrary">
-<arg>xpath=//*[@id="header"]/div[2]//div[1]/a/span</arg>
-<arg>${PESSOA.nome} ${PESSOA.sobrenome}</arg>
-<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<msg timestamp="20210708 15:07:22.040" level="INFO">Verifying element 'xpath=//*[@id="header"]/div[2]//div[1]/a/span' contains exact text 'Carla Soares'.</msg>
-<status status="PASS" starttime="20210708 15:07:22.039" endtime="20210708 15:07:22.066"/>
-</kw>
-<status status="PASS" starttime="20210708 15:07:21.984" endtime="20210708 15:07:22.066"/>
-</kw>
-<status status="PASS" starttime="20210708 15:07:10.133" endtime="20210708 15:07:22.067"/>
+<status status="FAIL" starttime="20210712 13:05:25.386" endtime="20210712 13:05:49.660">WebDriverException: Message: chrome not reachable
+  (Session info: chrome=91.0.4472.124)
+</status>
 </test>
 <kw name="Fechar o navegador" library="resource_web" type="TEARDOWN">
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20210708 15:07:22.070" endtime="20210708 15:07:24.422"/>
+<status status="PASS" starttime="20210712 13:05:49.666" endtime="20210712 13:05:51.744"/>
 </kw>
-<status status="PASS" starttime="20210708 15:07:22.069" endtime="20210708 15:07:24.423"/>
+<status status="PASS" starttime="20210712 13:05:49.665" endtime="20210712 13:05:51.745"/>
 </kw>
 <doc>teste case web</doc>
-<status status="PASS" starttime="20210708 15:06:44.035" endtime="20210708 15:07:24.423"/>
+<status status="FAIL" starttime="20210712 13:04:41.585" endtime="20210712 13:05:51.745"/>
 </suite>
 <statistics>
 <total>
-<stat pass="4" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="4" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="4" fail="0" skip="0" id="s1" name="Web Test">Web Test</stat>
+<stat pass="0" fail="4" skip="0" id="s1" name="Web Test">Web Test</stat>
 </suite>
 </statistics>
 <errors>
+<msg timestamp="20210712 13:05:01.068" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: chrome not reachable
+  (Session info: chrome=91.0.4472.124)
+</msg>
+<msg timestamp="20210712 13:05:25.373" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: chrome not reachable
+  (Session info: chrome=91.0.4472.124)
+</msg>
+<msg timestamp="20210712 13:05:49.648" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: chrome not reachable
+  (Session info: chrome=91.0.4472.124)
+</msg>
 </errors>
 </robot>

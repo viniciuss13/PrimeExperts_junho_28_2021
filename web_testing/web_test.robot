@@ -7,6 +7,7 @@ Suite Teardown    Fechar o navegador
 
 
 *** Test Cases ***
+
 Caso de Teste 01: Pesquisar produto existente
     Acessar a página home do site Automation Practice
     Digitar o nome do produto "Blouse" no campo de pesquisa

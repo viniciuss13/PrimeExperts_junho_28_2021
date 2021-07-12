@@ -1,5 +1,4 @@
 *** Settings ***
-
 Documentation    arquivo responsavel pelas importacoes, variaveis e KeyWords
 Library          SeleniumLibrary    timeout=5
 Library          String
@@ -16,6 +15,7 @@ ${MENSAGEM_ALERTA}      No results were found for your search "itemNãoExistente
 
 @{PRODUTOS_SUB_SUMMER}   Printed Summer Dress   Printed Summer Dress    Printed Chiffon Dress
 
+
 *** Keywords ***
 ## ----- suite setup
 Abrir o navegador   
@@ -25,9 +25,11 @@ Abrir o navegador
 Fechar o navegador
 
     Close Browser
+
 ## --- acoes
 
 Acessar a página home do site Automation Practice
+    
     Go To    ${URL}
 
 Digitar o nome do produto "${produto}" no campo de pesquisa
@@ -48,7 +50,6 @@ Conferir Mensagem De Erro "${MENSAGEM_ALERTA}"
 
     Wait Until Element Is Visible   //*[@id="center_column"]/p[@class='alert alert-warning']
     Element Should Be Visible       //*[@id="center_column"]/p[@class='alert alert-warning']    ${MENSAGEM_ALERTA}
-
 
 Passar o mouse por cima da categoria "${WOMEN}" no menu principal superior de categorias
 
