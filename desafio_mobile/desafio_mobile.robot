@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation       arquivo responsavel pelos testing do mobile
+Documentation       arquivo responsavel pelo testing do mobile
 Resource            desafio_resource.robot
 Suite Setup         Abrir o aplicativo no celular
 
